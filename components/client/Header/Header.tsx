@@ -6,8 +6,10 @@ import TopHeader from "./TopHeader";
 const Header = () => {
   return (
     <header>
-      <TopHeader />
-      <BottomHeader />
+      <div className="container">
+        <TopHeader />
+        <BottomHeader />
+      </div>
     </header>
   );
 };
