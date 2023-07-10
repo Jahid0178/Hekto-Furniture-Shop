@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-6 py-2;
+  }
+
+  .btn-primary {
+    @apply bg-[#FB2E86] text-white hover:bg-[#e02777];
+  }
+
+  .btn-secondary {
+    @apply bg-[#08D15F] text-white hover:bg-[#0bc75d];
+  }
+}
