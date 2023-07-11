@@ -14,4 +14,12 @@
   .btn-secondary {
     @apply bg-[#08D15F] text-white hover:bg-[#0bc75d];
   }
+
+  .text-primary {
+    @apply text-[#101750];
+  }
+
+  .text-secondary {
+    @apply text-[#FB2E86];
+  }
 }

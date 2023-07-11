@@ -6,10 +6,10 @@ import TopHeader from "./TopHeader";
 const Header = () => {
   return (
     <header>
-      <div className="container">
+      <div className="bg-violet-500 text-white py-2">
         <TopHeader />
-        <BottomHeader />
       </div>
+      <BottomHeader />
     </header>
   );
 };
