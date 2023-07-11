@@ -21,7 +21,25 @@ const TopHeader = () => {
             +8801789293803
           </Link>
         </div>
-        <div>2</div>
+        <div>
+          <ul className="flex gap-4">
+            <li>
+              <Link href="#">English</Link>
+            </li>
+            <li>
+              <Link href="#">USD</Link>
+            </li><
+              li>
+              <Link href="#">Login</Link>
+            </li>
+            <li>
+              <Link href="#">Wishlist</Link>
+            </li>
+            <li>
+              <Link href="#">Cart</Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   );
