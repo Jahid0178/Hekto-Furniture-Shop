@@ -22,4 +22,8 @@
   .text-secondary {
     @apply text-[#FB2E86];
   }
+
+  .input-primary {
+    @apply px-3 py-2 border-2 border-gray-200 outline-none;
+  }
 }

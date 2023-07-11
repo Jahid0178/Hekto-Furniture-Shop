@@ -9,7 +9,9 @@ const Header = () => {
       <div className="bg-violet-500 text-white py-2">
         <TopHeader />
       </div>
-      <BottomHeader />
+      <div className="py-4">
+        <BottomHeader />
+      </div>
     </header>
   );
 };
