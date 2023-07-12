@@ -15,7 +15,9 @@ const BottomHeader = () => {
         <ul className="flex gap-4">
           {navigationLinks.map((navigationLink) => (
             <li key={navigationLink.id}>
-              <Link href={navigationLink.href}>{navigationLink.label}</Link>
+              <Link href={navigationLink.href} className="hover:text-[#FB2E86]">
+                {navigationLink.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -25,6 +27,7 @@ const BottomHeader = () => {
             className="input-primary"
             onChange={(e) => console.log(e.target.value)}
             searchButton={true}
+            placeholder="Search Furniture"
           />
         </div>
       </nav>

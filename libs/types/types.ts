@@ -10,4 +10,5 @@ export type InputFieldProps = {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className: string;
   searchButton?: boolean;
+  placeholder?: string;
 };
