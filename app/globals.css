@@ -41,6 +41,19 @@
     @apply bg-[#ECD2FA/50];
   }
 
+  /* Cards */
+  .promo-card {
+    @apply px-5 py-8;
+  }
+
+  .promo-card-1 {
+    @apply bg-gradient-to-r from-[#5465FF] to-[#B654EF];
+  }
+
+  .promo-card-2 {
+    @apply bg-gradient-to-r from-[#4E5AFF] to-[#5D8DFF];
+  }
+
   /* Footer Section */
   .top-footer {
     @apply bg-[#EEEFFB] py-20;

@@ -12,3 +12,9 @@ export type InputFieldProps = {
   searchButton?: boolean;
   placeholder?: string;
 };
+
+export type PromoAdsProps = {
+  title: string;
+  src: string;
+  variant: string;
+};
