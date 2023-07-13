@@ -12,7 +12,7 @@ const BottomHeader = () => {
         <div>
           <Logo title="Hekto" />
         </div>
-        <ul className="flex gap-4">
+        <ul className="hidden md:flex gap-4">
           {navigationLinks.map((navigationLink) => (
             <li key={navigationLink.id}>
               <Link href={navigationLink.href} className="hover:text-[#FB2E86]">
@@ -21,7 +21,7 @@ const BottomHeader = () => {
             </li>
           ))}
         </ul>
-        <div>
+        <div className="hidden md:block">
           <Input
             type="text"
             className="input-primary"
