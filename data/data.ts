@@ -7,21 +7,21 @@ export const navigationLinks = [
   {
     id: 2,
     label: "Products",
-    href: "/",
+    href: "/products",
   },
   {
     id: 3,
     label: "Shop",
-    href: "/",
+    href: "/shop",
   },
   {
     id: 4,
     label: "Blog",
-    href: "/",
+    href: "/blog",
   },
   {
     id: 5,
     label: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];
