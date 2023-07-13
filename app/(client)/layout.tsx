@@ -1,5 +1,6 @@
 import Header from "@/components/client/Header/Header";
 import "../globals.css";
+import "swiper/css";
 import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
 

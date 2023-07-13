@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  section {
+    @apply py-8;
+  }
+}
+
 @layer components {
   .btn {
     @apply px-6 py-2;
@@ -23,7 +29,15 @@
     @apply text-[#FB2E86];
   }
 
+  .text-dimm {
+    @apply text-[#8A8FB9];
+  }
+
   .input-primary {
     @apply px-3 py-2 border-2 border-gray-200 outline-none;
+  }
+
+  .section-bg {
+    @apply bg-[#ECD2FA/50];
   }
 }
