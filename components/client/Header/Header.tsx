@@ -6,7 +6,7 @@ import TopHeader from "./TopHeader";
 const Header = () => {
   return (
     <header>
-      <div className="bg-violet-500 text-white py-2">
+      <div className="hidden md:block bg-violet-500 text-white py-2">
         <TopHeader />
       </div>
       <div className="py-4">
