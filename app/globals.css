@@ -29,7 +29,7 @@
     @apply text-[#FB2E86];
   }
 
-  .text-dimm {
+  .sub-text {
     @apply text-[#8A8FB9];
   }
 
@@ -39,5 +39,14 @@
 
   .section-bg {
     @apply bg-[#ECD2FA/50];
+  }
+
+  /* Footer Section */
+  .top-footer {
+    @apply bg-[#EEEFFB] py-20;
+  }
+
+  .bottom-footer {
+    @apply bg-[#E7E4F8] py-4;
   }
 }
