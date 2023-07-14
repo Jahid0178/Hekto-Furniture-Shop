@@ -1,5 +1,6 @@
 "use client";
 
+import ProductCard from "@/components/client/Cards/ProductCard/ProductCard";
 import PromoAds from "@/components/client/Cards/PromoAds/PromoAds";
 import Title from "@/components/client/Title/Title";
 import Button from "@/components/common/Button/Button";
@@ -18,7 +19,7 @@ const ComponentPage = () => {
             Add To Cart
           </Button>
         </div>
-        <div>
+        <div className="mb-4">
           <Title title="Promo Ads" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PromoAds
@@ -30,6 +31,17 @@ const ComponentPage = () => {
               title="20% off in Headphone"
               src="/images/headphone.png"
               variant="promo-card-2"
+            />
+          </div>
+        </div>
+        <div className="mb-4">
+          <Title title="Product Card" />
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+            <ProductCard
+              title="Cantilever Chair"
+              code="Y523201"
+              price="42.00"
+              imgUrl="/images/white-chair.png"
             />
           </div>
         </div>
