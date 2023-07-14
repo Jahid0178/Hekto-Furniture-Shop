@@ -23,3 +23,10 @@ export type TitleProps = {
   title: string;
   description?: string;
 };
+
+export type ProductCardProps = {
+  title: string;
+  code: string;
+  price: string;
+  imgUrl: string;
+};
