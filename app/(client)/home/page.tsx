@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const HomePage = () => {
   return (
-    <section className="section-bg">
+    <section className="section-bg py-10">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
