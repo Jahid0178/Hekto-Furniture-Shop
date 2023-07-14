@@ -1,5 +1,6 @@
 "use client";
 
+import ProductCard from "@/components/client/Cards/ProductCard/ProductCard";
 import Title from "@/components/client/Title/Title";
 import Button from "@/components/common/Button/Button";
 import Container from "@/components/common/Container";
@@ -44,6 +45,34 @@ const HomePage = () => {
       <section className="py-10">
         <Container>
           <Title title="Featured Products" />
+          <div className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <ProductCard
+                title="Cantilever Chair"
+                code="Y523201"
+                price="42.00"
+                imgUrl="/images/white-chair.png"
+              />
+              <ProductCard
+                title="Cantilever Chair"
+                code="Y523201"
+                price="42.00"
+                imgUrl="/images/white-chair.png"
+              />
+              <ProductCard
+                title="Cantilever Chair"
+                code="Y523201"
+                price="42.00"
+                imgUrl="/images/white-chair.png"
+              />
+              <ProductCard
+                title="Cantilever Chair"
+                code="Y523201"
+                price="42.00"
+                imgUrl="/images/white-chair.png"
+              />
+            </div>
+          </div>
         </Container>
       </section>
     </>
