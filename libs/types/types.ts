@@ -18,3 +18,8 @@ export type PromoAdsProps = {
   src: string;
   variant: string;
 };
+
+export type TitleProps = {
+  title: string;
+  description?: string;
+};
