@@ -3,6 +3,8 @@
 import Header from "@/components/client/Header/Header";
 import "../globals.css";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Josefin_Sans } from "next/font/google";
 import Footer from "@/components/client/Footer/Footer";
 
