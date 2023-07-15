@@ -91,3 +91,30 @@ export const footerContents = [
   },
   ,
 ];
+
+export const offersDatas = [
+  {
+    id: 1,
+    image: "/images/offer-logos/free-delivery.png",
+    title: "Free Home Delivery",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.",
+  },
+  {
+    id: 2,
+    image: "/images/offer-logos/cashback.png",
+    title: "Cashback",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.",
+  },
+  {
+    id: 3,
+    image: "/images/offer-logos/premium-quality.png",
+    title: "Premium Quality",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.",
+  },
+  {
+    id: 4,
+    image: "/images/offer-logos/support.png",
+    title: "24 Hours Support",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.",
+  },
+];

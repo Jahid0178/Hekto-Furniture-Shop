@@ -7,6 +7,8 @@ import Container from "@/components/common/Container";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import { offersDatas } from "@/data/data";
+import OfferCard from "@/components/client/Cards/OfferCard/OfferCard";
 
 const HomePage = () => {
   return (
@@ -81,6 +83,21 @@ const HomePage = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+        </Container>
+      </section>
+      <section className="py-10">
+        <Container>
+          <Title title="Latest Products" />
+        </Container>
+      </section>
+      <section>
+        <Container>
+          <Title title="What Shopex Offer!" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {offersDatas.map((offer) => (
+              <OfferCard key={offer.id} data={offer} />
+            ))}
           </div>
         </Container>
       </section>
