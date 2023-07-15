@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px !important;
+}
+
 @layer base {
   section {
     @apply py-8;

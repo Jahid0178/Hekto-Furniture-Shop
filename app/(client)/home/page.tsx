@@ -5,6 +5,8 @@ import Title from "@/components/client/Title/Title";
 import Button from "@/components/common/Button/Button";
 import Container from "@/components/common/Container";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const HomePage = () => {
   return (
@@ -46,32 +48,25 @@ const HomePage = () => {
         <Container>
           <Title title="Featured Products" />
           <div className="mt-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <ProductCard
-                title="Cantilever Chair"
-                code="Y523201"
-                price="42.00"
-                imgUrl="/images/white-chair.png"
-              />
-              <ProductCard
-                title="Cantilever Chair"
-                code="Y523201"
-                price="42.00"
-                imgUrl="/images/white-chair.png"
-              />
-              <ProductCard
-                title="Cantilever Chair"
-                code="Y523201"
-                price="42.00"
-                imgUrl="/images/white-chair.png"
-              />
-              <ProductCard
-                title="Cantilever Chair"
-                code="Y523201"
-                price="42.00"
-                imgUrl="/images/white-chair.png"
-              />
-            </div>
+            <Swiper
+              slidesPerView={5}
+              spaceBetween={10}
+              modules={[Pagination, Navigation]}
+              pagination={{ clickable: true }}
+              navigation={true}
+              className="mySwiper"
+            >
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                <SwiperSlide key={item}>
+                  <ProductCard
+                    title="Cantilever Chair"
+                    code="Y523201"
+                    price="42.00"
+                    imgUrl="/images/white-chair.png"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </Container>
       </section>
