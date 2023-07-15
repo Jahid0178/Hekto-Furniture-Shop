@@ -49,11 +49,25 @@ const HomePage = () => {
           <Title title="Featured Products" />
           <div className="mt-8">
             <Swiper
-              slidesPerView={5}
+              slidesPerView={2}
               spaceBetween={10}
               modules={[Pagination, Navigation]}
               pagination={{ clickable: true }}
               navigation={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 5,
+                  spaceBetween: 50,
+                },
+              }}
               className="mySwiper"
             >
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
