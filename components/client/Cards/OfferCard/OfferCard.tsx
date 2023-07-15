@@ -20,7 +20,7 @@ const OfferCard = ({ data }: OfferCardProps) => {
         height={60}
         className="mb-4 mx-auto"
       />
-      <h2 className="mb-2 text-2xl text-primary">{title}</h2>
+      <h2 className="mb-2 text-2xl text-primary font-bold">{title}</h2>
       <p>{desc}</p>
     </div>
   );
