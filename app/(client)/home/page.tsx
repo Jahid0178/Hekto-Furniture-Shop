@@ -101,6 +101,11 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
+      <section>
+        <Container>
+          <Title title="Trending Products" />
+        </Container>
+      </section>
     </>
   );
 };
