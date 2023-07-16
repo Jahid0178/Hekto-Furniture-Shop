@@ -29,4 +29,5 @@ export type ProductCardProps = {
   code: string;
   price: string;
   imgUrl: string;
+  id: number | string;
 };
