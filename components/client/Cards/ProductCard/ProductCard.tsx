@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { ProductCardProps } from "@/libs/types/types";
 import Image from "next/image";
+import { BsBag, BsZoomIn, BsHeart } from "react-icons/bs";
 
 const ProductCard = ({ title, code, price, imgUrl }: ProductCardProps) => {
   const pathname = usePathname();
@@ -16,8 +17,13 @@ const ProductCard = ({ title, code, price, imgUrl }: ProductCardProps) => {
         height={180}
         className={`mx-auto ${productPage && "group-hover:bg-blue-50"}`}
       />
+      <div className="flex justify-center gap-4 p-2">
+        <BsBag size={15} cursor="pointer" />
+        <BsZoomIn size={15} cursor="pointer" />
+        <BsHeart size={15} cursor="pointer" />
+      </div>
       <div
-        className={`text-center mt-2 p-4 ${
+        className={`text-center p-4 ${
           !productPage && "group-hover:bg-[#2F1AC4]"
         }`}
       >
