@@ -15,7 +15,9 @@ const ProductCard = ({ title, code, price, imgUrl }: ProductCardProps) => {
         alt=""
         width={180}
         height={180}
-        className={`mx-auto ${productPage && "group-hover:bg-blue-50"}`}
+        className={`mx-auto ${
+          productPage && "group-hover:bg-blue-50"
+        } w-full bg-[#F6F7FB]`}
       />
       <div className="flex justify-center gap-4 p-2">
         <BsBag size={15} cursor="pointer" />
