@@ -5,6 +5,7 @@ import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { AiFillAppstore } from "react-icons/ai";
 import { MdOutlineAlignHorizontalLeft } from "react-icons/md";
+import ProductCard from "@/components/client/Cards/ProductCard/ProductCard";
 
 const ProductsPage = () => {
   return (
@@ -39,6 +40,18 @@ const ProductsPage = () => {
                 <MdOutlineAlignHorizontalLeft />
               </span>
             </div>
+          </div>
+          {/* Products Data Showing */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+              <ProductCard
+                key={item}
+                title="Cantilever Chair"
+                code="Y523201"
+                price="42.00"
+                imgUrl="/images/white-chair.png"
+              />
+            ))}
           </div>
         </Container>
       </section>
