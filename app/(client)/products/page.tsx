@@ -42,7 +42,7 @@ const ProductsPage = () => {
             </div>
           </div>
           {/* Products Data Showing */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pt-5">
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
               <ProductCard
                 key={item}
