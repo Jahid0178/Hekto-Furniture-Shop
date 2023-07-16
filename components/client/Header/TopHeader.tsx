@@ -28,9 +28,9 @@ const TopHeader = () => {
             </li>
             <li>
               <Link href="#">USD</Link>
-            </li><
-              li>
-              <Link href="#">Login</Link>
+            </li>
+            <li>
+              <Link href="/auth/sign-in/">Login</Link>
             </li>
             <li>
               <Link href="#">Wishlist</Link>
