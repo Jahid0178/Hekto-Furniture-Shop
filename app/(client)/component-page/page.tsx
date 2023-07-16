@@ -42,6 +42,7 @@ const ComponentPage = () => {
               code="Y523201"
               price="42.00"
               imgUrl="/images/white-chair.png"
+              id=""
             />
           </div>
         </div>
