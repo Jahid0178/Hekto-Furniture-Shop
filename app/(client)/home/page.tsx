@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import { offersDatas } from "@/data/data";
 import OfferCard from "@/components/client/Cards/OfferCard/OfferCard";
+import BlogCard from "@/components/client/Cards/BlogCard/BlogCard";
 
 const HomePage = () => {
   return (
@@ -91,7 +92,7 @@ const HomePage = () => {
           <Title title="Latest Products" />
         </Container>
       </section>
-      <section>
+      <section className="py-10">
         <Container>
           <Title title="What Shopex Offer!" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -101,9 +102,19 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
-      <section>
+      <section className="py-10">
         <Container>
           <Title title="Trending Products" />
+        </Container>
+      </section>
+      <section className="py-10">
+        <Container>
+          <Title title="Latest Blog" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[1, 2, 3].map((item) => (
+              <BlogCard key={item} />
+            ))}
+          </div>
         </Container>
       </section>
     </>
