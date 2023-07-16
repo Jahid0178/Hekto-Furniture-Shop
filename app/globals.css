@@ -26,6 +26,10 @@
     @apply bg-[#08D15F] text-white hover:bg-[#0bc75d];
   }
 
+  .bg-primary {
+    @apply bg-[#fb2e86];
+  }
+
   .text-primary {
     @apply text-[#101750];
   }
