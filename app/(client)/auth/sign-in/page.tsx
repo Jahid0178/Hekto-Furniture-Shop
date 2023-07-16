@@ -46,7 +46,7 @@ const SignInPage = () => {
             />
           </form>
           <p className="mt-4 text-center sub-text">
-            Don't have an Account?{" "}
+            Don&apos;t have an Account?{" "}
             <Link href="#" className="hover:text-primary">
               Create account
             </Link>
