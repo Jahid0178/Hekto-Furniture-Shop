@@ -4,8 +4,9 @@ import { usePathname } from "next/navigation";
 import { ProductCardProps } from "@/libs/types/types";
 import Image from "next/image";
 import { BsBag, BsZoomIn, BsHeart } from "react-icons/bs";
+import Link from "next/link";
 
-const ProductCard = ({ title, code, price, imgUrl }: ProductCardProps) => {
+const ProductCard = ({ title, code, price, imgUrl, id }: ProductCardProps) => {
   const pathname = usePathname();
   const productPage = pathname.slice(1).includes("products");
   return (
@@ -29,13 +30,15 @@ const ProductCard = ({ title, code, price, imgUrl }: ProductCardProps) => {
           !productPage && "group-hover:bg-[#2F1AC4]"
         }`}
       >
-        <h2
-          className={`text-secondary text-lg md:text-2xl ${
-            !productPage && "group-hover:text-white"
-          }`}
-        >
-          {title}
-        </h2>
+        <Link href={`/products/${id}`}>
+          <h2
+            className={`text-secondary text-lg md:text-2xl ${
+              !productPage && "group-hover:text-white"
+            }`}
+          >
+            {title}
+          </h2>
+        </Link>
         <p
           className={`text-primary ${!productPage && "group-hover:text-white"}`}
         >
