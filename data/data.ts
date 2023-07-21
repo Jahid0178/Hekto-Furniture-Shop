@@ -118,3 +118,48 @@ export const offersDatas = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.",
   },
 ];
+
+export const latestProducts = [
+  {
+    id: 1,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+  {
+    id: 2,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+  {
+    id: 3,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+  {
+    id: 4,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+  {
+    id: 5,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+  {
+    id: 6,
+    imgSrc: "/images/single-sofa.png",
+    title: "Comfort Handy Craft",
+    price: 42.0,
+    regularPrice: 65.0,
+  },
+];
