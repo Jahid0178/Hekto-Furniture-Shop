@@ -7,6 +7,17 @@
   bottom: -5px !important;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #fb2e86 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2rem !important;
+  color: #fb2e86 !important;
+  font-weight: 600 !important;
+}
+
 @layer base {
   section {
     @apply py-8;
