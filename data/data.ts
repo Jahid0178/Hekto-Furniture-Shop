@@ -32,18 +32,23 @@ export const footerContents = [
     links: [
       {
         label: "Laptop & Computers",
+        href: "#",
       },
       {
         label: "Cameras & Photography",
+        href: "#",
       },
       {
         label: "Smart Phones & Tablets",
+        href: "#",
       },
       {
         label: "Video Games & Consoles",
+        href: "#",
       },
       {
         label: "Waterproof Headphones",
+        href: "#",
       },
     ],
   },
@@ -53,18 +58,23 @@ export const footerContents = [
     links: [
       {
         label: "My Account",
+        href: "#",
       },
       {
         label: "Discount",
+        href: "#",
       },
       {
         label: "Returns",
+        href: "#",
       },
       {
         label: "Orders History",
+        href: "#",
       },
       {
         label: "Order Tracking",
+        href: "#",
       },
     ],
   },
@@ -74,18 +84,27 @@ export const footerContents = [
     links: [
       {
         label: "Blog",
+        href: "/blog",
       },
       {
         label: "Browse the Shop",
+        href: "#",
       },
       {
         label: "Category",
+        href: "#",
       },
       {
         label: "Pre-Built Pages",
+        href: "#",
       },
       {
         label: "Visual Composer Elements",
+        href: "#",
+      },
+      {
+        label: "FAQ",
+        href: "/faq",
       },
     ],
   },
