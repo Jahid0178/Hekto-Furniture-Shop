@@ -2,7 +2,7 @@
 
 import ProductCard from "@/components/client/Cards/ProductCard/ProductCard";
 import PromoAds from "@/components/client/Cards/PromoAds/PromoAds";
-import Title from "@/components/client/Title/Title";
+import Heading from "@/components/client/Heading/Heading";
 import Button from "@/components/common/Button/Button";
 import React from "react";
 
@@ -11,7 +11,7 @@ const ComponentPage = () => {
     <section>
       <div className="container">
         <div className="mb-4">
-          <Title title="Buttons" />
+          <Heading title="Buttons" />
           <Button type="button" className="btn btn-primary">
             Shop Now
           </Button>
@@ -20,7 +20,7 @@ const ComponentPage = () => {
           </Button>
         </div>
         <div className="mb-4">
-          <Title title="Promo Ads" />
+          <Heading title="Promo Ads" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <PromoAds
               title="50% off in Apple Watch"
@@ -35,7 +35,7 @@ const ComponentPage = () => {
           </div>
         </div>
         <div className="mb-4">
-          <Title title="Product Card" />
+          <Heading title="Product Card" />
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
             <ProductCard
               title="Cantilever Chair"
