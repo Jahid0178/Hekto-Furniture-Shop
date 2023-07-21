@@ -10,12 +10,14 @@ const ProductSidebar = () => {
         return (
           <div key={ind} className="mb-4">
             <h2 className="text-lg text-primary mb-2">{content.title}</h2>
-            {content.items.map((item) => (
-              <span key={item.id} className="flex items-center gap-2">
-                <input type="checkbox" id={item.label} />
-                <label htmlFor={item.label}>{item.label}</label>
-              </span>
-            ))}
+            <ul>
+              {content.items.map((item) => (
+                <li key={item.id} className="flex items-center gap-2">
+                  <input type="checkbox" id={item.label} />
+                  <label htmlFor={item.label}>{item.label}</label>
+                </li>
+              ))}
+            </ul>
           </div>
         );
       })}
