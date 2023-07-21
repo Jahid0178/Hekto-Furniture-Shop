@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { BsCart3, BsHeart, BsZoomIn } from "react-icons/bs";
 
 type WideCardProps = {
   data: {
@@ -15,7 +16,18 @@ const WideCard = ({ data }: WideCardProps) => {
   const { id, imgSrc, title, price, regularPrice } = data;
 
   return (
-    <div className="p-2">
+    <div className="p-2 relative group">
+      <ul className="hidden absolute bottom-11 left-2 group-hover:inline-block">
+        <li className="my-5 text-[#151875]">
+          <BsCart3 cursor="pointer" size={20} />
+        </li>
+        <li className="my-5 text-[#151875]">
+          <BsHeart cursor="pointer" size={20} />
+        </li>
+        <li className="my-5 text-[#151875]">
+          <BsZoomIn cursor="pointer" size={20} />
+        </li>
+      </ul>
       <div className="bg-gray-100 hover:bg-white">
         <Image
           src={imgSrc}
@@ -26,10 +38,10 @@ const WideCard = ({ data }: WideCardProps) => {
         />
       </div>
       <div className="flex gap-2 justify-between items-center p-1">
-        <h3>{title}</h3>
+        <h3 className="text-[#151875]">{title}</h3>
         <span className="flex gap-2">
-          <span>${price}</span>
-          <span>${regularPrice}</span>
+          <p className="text-[#151875]">${price}</p>
+          <p className="text-secondary line-through">${regularPrice}</p>
         </span>
       </div>
     </div>
