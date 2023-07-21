@@ -1,13 +1,17 @@
 "use client";
 
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import Heading from "@/components/client/Heading/Heading";
 import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { ContactFormProps } from "@/libs/interfaces/interface";
 
 const ContactPage = () => {
+  const { register, handleSubmit } = useForm<ContactFormProps>();
+  const onSubmit: SubmitHandler<ContactFormProps> = (data) => console.log(data);
   return (
     <>
       <PageHeading title="Contact" />
@@ -68,6 +72,30 @@ const ContactPage = () => {
                 praesentium vitae commodi veniam cumque incidunt ipsum
                 laboriosam nam voluptas enim?"
               />
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                  className="w-full border outline-none mb-4 p-2"
+                  placeholder="Your Name*"
+                  {...register("name", { required: true })}
+                />
+                <input
+                  className="w-full border outline-none mb-4 p-2"
+                  placeholder="Your Email*"
+                  {...register("email", { required: true })}
+                />
+                <input
+                  className="w-full border outline-none mb-4 p-2"
+                  placeholder="Subject*"
+                  {...register("subject", { required: true })}
+                />
+                <textarea
+                  rows={8}
+                  className="w-full border outline-none mb-4 p-2"
+                  placeholder="Message*"
+                  {...register("message", { required: true })}
+                />
+                <input type="submit" className="btn btn-primary" />
+              </form>
             </div>
             <div className="p-2">
               <Image
