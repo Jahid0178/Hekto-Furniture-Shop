@@ -8,7 +8,6 @@ const Button = ({
   type,
   icon,
 }: ButtonProps): JSX.Element => {
-  console.log(icon);
   return (
     <button className={className} type={type}>
       {children} {icon}
