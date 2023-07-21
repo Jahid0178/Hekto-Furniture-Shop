@@ -1,6 +1,6 @@
 import { TitleProps } from "@/libs/types/types";
 
-const Title = ({ title, description }: TitleProps) => {
+const Heading = ({ title, description }: TitleProps) => {
   return (
     <div className="text-center mb-4">
       <h2 className="text-3xl font-bold text-primary">{title}</h2>
@@ -9,4 +9,4 @@ const Title = ({ title, description }: TitleProps) => {
   );
 };
 
-export default Title;
+export default Heading;

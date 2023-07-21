@@ -1,7 +1,6 @@
 "use client";
 
 import ProductCard from "@/components/client/Cards/ProductCard/ProductCard";
-import Title from "@/components/client/Title/Title";
 import Button from "@/components/common/Button/Button";
 import Container from "@/components/common/Container";
 import Image from "next/image";
@@ -10,10 +9,12 @@ import { Pagination, Navigation } from "swiper/modules";
 import { offersDatas } from "@/data/data";
 import OfferCard from "@/components/client/Cards/OfferCard/OfferCard";
 import BlogCard from "@/components/client/Cards/BlogCard/BlogCard";
+import Heading from "@/components/client/Heading/Heading";
 
 const HomePage = () => {
   return (
     <>
+      {/* Hero Section */}
       <section className="section-bg py-10">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
@@ -49,7 +50,7 @@ const HomePage = () => {
       {/* Featured Section */}
       <section className="py-10">
         <Container>
-          <Title title="Featured Products" />
+          <Heading title="Featured Products" />
           <div className="mt-8">
             <Swiper
               slidesPerView={2}
@@ -88,14 +89,16 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
+      {/* Latest Proudct Section */}
       <section className="py-10">
         <Container>
-          <Title title="Latest Products" />
+          <Heading title="Latest Products" />
         </Container>
       </section>
+      {/* Offer Section */}
       <section className="py-10">
         <Container>
-          <Title title="What Shopex Offer!" />
+          <Heading title="What Shopex Offer!" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {offersDatas.map((offer) => (
               <OfferCard key={offer.id} data={offer} />
@@ -103,14 +106,16 @@ const HomePage = () => {
           </div>
         </Container>
       </section>
+      {/* Trending Product Section */}
       <section className="py-10">
         <Container>
-          <Title title="Trending Products" />
+          <Heading title="Trending Products" />
         </Container>
       </section>
+      {/* Latest Blog Section */}
       <section className="py-10">
         <Container>
-          <Title title="Latest Blog" />
+          <Heading title="Latest Blog" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3].map((item) => (
               <BlogCard key={item} />
