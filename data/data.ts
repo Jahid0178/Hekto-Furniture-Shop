@@ -163,3 +163,54 @@ export const latestProducts = [
     regularPrice: 65.0,
   },
 ];
+
+export const sidebarContents: {
+  title: string;
+  items: {
+    id: number;
+    label: string;
+  }[];
+}[] = [
+  {
+    title: "Product Brand",
+    items: [
+      {
+        id: 1,
+        label: "Coaster Furniture",
+      },
+      {
+        id: 2,
+        label: "Fusion Dot High Fashion",
+      },
+      {
+        id: 3,
+        label: "Unique Furniture Restor",
+      },
+      {
+        id: 4,
+        label: "Dream Furniture Flipping",
+      },
+      {
+        id: 5,
+        label: "Green DIY Furniture",
+      },
+    ],
+  },
+  {
+    title: "Discount Offer",
+    items: [
+      {
+        id: 1,
+        label: "20% Cashback",
+      },
+      {
+        id: 2,
+        label: "5% Cashback",
+      },
+      {
+        id: 3,
+        label: "25% Cashback",
+      },
+    ],
+  },
+];
