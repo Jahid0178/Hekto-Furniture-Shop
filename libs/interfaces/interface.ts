@@ -9,3 +9,9 @@ export interface ContactFormProps {
   subject: string;
   message: string;
 }
+
+export interface FAQFormProps {
+  name: string;
+  subject: string;
+  message: string;
+}
