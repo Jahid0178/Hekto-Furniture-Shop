@@ -31,3 +31,7 @@ export type ProductCardProps = {
   imgUrl: string;
   id: number | string;
 };
+
+export type NewsLaterProps = {
+  title: string;
+};

@@ -11,6 +11,9 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      backgroundImage: {
+        "newslater-pattern": "url('/images/newslater/newslater-banner.png')",
+      },
     },
   },
   plugins: [],
