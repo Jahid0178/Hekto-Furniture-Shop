@@ -28,7 +28,7 @@ const Footer = () => {
                   {content?.links?.map((link, ind) => (
                     <li key={ind}>
                       <Link
-                        href="#"
+                        href={link.href}
                         className="sub-text hover:text-black my-2 inline-block"
                       >
                         {link.label}
