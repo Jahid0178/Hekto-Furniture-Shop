@@ -233,3 +233,34 @@ export const sidebarContents: {
     ],
   },
 ];
+
+export const accordionContents: {
+  id: number;
+  title: string;
+  description: string;
+}[] = [
+  {
+    id: 1,
+    title: "Where Style Meets Comfort",
+    description:
+      "At Elegant Living, we believe that furniture should be a seamless blend of style and comfort. Discover a vast collection of exquisitely designed furniture pieces that not only elevate the aesthetics of your home but also provide the utmost comfort. From plush sofas and elegant dining sets to chic bedroom ensembles, find the perfect pieces to create your dream living space.",
+  },
+  {
+    id: 2,
+    title: "Embrace Nature's Beauty Indoors",
+    description:
+      "Welcome to Rustic Charm, where we celebrate the warmth and beauty of nature within your home. Our handcrafted furniture pieces showcase the allure of natural materials, bringing a touch of the outdoors into your living spaces. Whether you're looking for a stunning reclaimed wood dining table or a cozy leather armchair, immerse yourself in the rustic charm that embodies both simplicity and sophistication.",
+  },
+  {
+    id: 3,
+    title: "Furnish Your Cozy Retreat",
+    description:
+      "Make the most of your small living spaces with our specially curated collection at Small Space Solutions. Our furniture is thoughtfully designed to optimize space without compromising on style or functionality. Discover ingenious storage solutions, versatile multipurpose pieces, and compact designs that transform your compact retreat into a cozy and inviting haven.",
+  },
+  {
+    id: 4,
+    title: "Simplicity Redefined",
+    description:
+      "Embrace the essence of clean lines and sleek designs at Modern Minimalism. Our furniture store showcases contemporary pieces that exude sophistication and simplicity. Create a clutter-free oasis with our minimalist-inspired furniture range, featuring statement-making sofas, minimalist bed frames, and sleek storage solutions that add an air of refined elegance to your home.",
+  },
+];

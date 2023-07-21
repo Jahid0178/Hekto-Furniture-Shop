@@ -6,6 +6,7 @@ import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FAQFormProps } from "@/libs/interfaces/interface";
+import Accordion from "@/components/client/Accordion/Accordion";
 
 const FAQPage = () => {
   const { register, handleSubmit } = useForm<FAQFormProps>();
@@ -18,6 +19,7 @@ const FAQPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-2">
               <Heading title="General Information" />
+              <Accordion />
             </div>
             <div className="p-2">
               <Heading title="Ask a Question" />
