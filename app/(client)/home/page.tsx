@@ -52,7 +52,7 @@ const HomePage = () => {
       {/* Featured Section */}
       <section className="py-10">
         <Container>
-          <Heading title="Featured Products" />
+          <Heading title="Featured Products" className={"text-center"} />
           <div className="mt-8">
             <Swiper
               slidesPerView={2}
@@ -94,7 +94,7 @@ const HomePage = () => {
       {/* Latest Proudct Section */}
       <section className="py-10">
         <Container>
-          <Heading title="Latest Products" />
+          <Heading title="Latest Products" className={"text-center"} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {latestProducts.map((latestProduct) => (
               <WideCard key={latestProduct.id} data={latestProduct} />
@@ -105,7 +105,7 @@ const HomePage = () => {
       {/* Offer Section */}
       <section className="py-10">
         <Container>
-          <Heading title="What Shopex Offer!" />
+          <Heading title="What Shopex Offer!" className={"text-center"} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {offersDatas.map((offer) => (
               <OfferCard key={offer.id} data={offer} />
@@ -116,7 +116,7 @@ const HomePage = () => {
       {/* Trending Product Section */}
       <section className="py-10">
         <Container>
-          <Heading title="Trending Products" />
+          <Heading title="Trending Products" className={"text-center"} />
         </Container>
       </section>
       {/* News Later Section */}
@@ -126,7 +126,7 @@ const HomePage = () => {
       {/* Latest Blog Section */}
       <section className="py-10">
         <Container>
-          <Heading title="Latest Blog" />
+          <Heading title="Latest Blog" className={"text-center"} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3].map((item) => (
               <BlogCard key={item} />

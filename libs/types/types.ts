@@ -25,6 +25,7 @@ export type PromoAdsProps = {
 export type TitleProps = {
   title: string;
   description?: string;
+  className?: string;
 };
 
 export type ProductCardProps = {
