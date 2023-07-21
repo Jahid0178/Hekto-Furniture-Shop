@@ -29,7 +29,10 @@ const BlogCard = () => {
           More off this less hello samlande lied much over tightly circa horse
           taped mightly
         </p>
-        <Link href="#" className="mt-5 inline-block text-[#151875] underline">
+        <Link
+          href="/blog/50"
+          className="mt-5 inline-block text-[#151875] underline"
+        >
           Read More
         </Link>
       </div>
