@@ -11,6 +11,7 @@ import OfferCard from "@/components/client/Cards/OfferCard/OfferCard";
 import BlogCard from "@/components/client/Cards/BlogCard/BlogCard";
 import Heading from "@/components/client/Heading/Heading";
 import WideCard from "@/components/client/Cards/WideCard/WideCard";
+import NewsLaterSignup from "@/components/common/Banners/NewsLater/NewsLaterSignup";
 
 const HomePage = () => {
   return (
@@ -117,6 +118,10 @@ const HomePage = () => {
         <Container>
           <Heading title="Trending Products" />
         </Container>
+      </section>
+      {/* News Later Section */}
+      <section className="py-0">
+        <NewsLaterSignup title="Get Leatest Update By Subscribe Our Newslater" />
       </section>
       {/* Latest Blog Section */}
       <section className="py-10">
