@@ -8,6 +8,10 @@ import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ContactFormProps } from "@/libs/interfaces/interface";
+import { RiContactsBook2Line } from "react-icons/ri";
+import { IoCallOutline } from "react-icons/io5";
+import { SlLocationPin } from "react-icons/sl";
+import { TbTruckDelivery } from "react-icons/tb";
 
 const ContactPage = () => {
   const { register, handleSubmit } = useForm<ContactFormProps>();
@@ -28,7 +32,9 @@ const ContactPage = () => {
               <Heading title="Contact Way" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-1 flex items-center gap-2">
-                  <span>1</span>
+                  <span className="w-12 h-12 bg-blue-700 flex justify-center items-center rounded-full">
+                    <RiContactsBook2Line size={30} color="#fff" />
+                  </span>
                   <span>
                     <Link href="tel:877678899" className="sub-text">
                       Tel: 877-67-88-99
@@ -40,13 +46,17 @@ const ContactPage = () => {
                   </span>
                 </div>
                 <div className="p-1 flex items-center gap-2">
-                  <span>1</span>
+                  <span className="w-12 h-12 bg-pink-600 flex justify-center items-center rounded-full">
+                    <IoCallOutline size={30} color="#fff" />
+                  </span>
                   <span>
                     <p className="sub-text">Support fourm for over 24hr</p>
                   </span>
                 </div>
                 <div className="p-1 flex items-center gap-2">
-                  <span>1</span>
+                  <span className="w-12 h-12 bg-yellow-500 flex justify-center items-center rounded-full">
+                    <SlLocationPin size={30} color="#fff" />
+                  </span>
                   <span>
                     <p className="sub-text">
                       20 Margaret st, London, Great britain, 3NM98-LK
@@ -54,7 +64,9 @@ const ContactPage = () => {
                   </span>
                 </div>
                 <div className="p-1 flex items-center gap-2">
-                  <span>1</span>
+                  <span className="w-12 h-12 bg-green-600 flex justify-center items-center rounded-full">
+                    <TbTruckDelivery size={30} color="#fff" />
+                  </span>
                   <span>
                     <p className="sub-text">
                       Free standart shipping on all orders
