@@ -265,14 +265,7 @@ export const accordionContents: {
   },
 ];
 
-export const cartItems: {
-  id: number;
-  product_name: string;
-  imgSrc: string;
-  price: number;
-  quantity: number;
-  total: number;
-}[] = [
+export const cartItems = [
   {
     id: 1,
     product_name: "Comfortable Sofa",
