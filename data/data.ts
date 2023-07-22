@@ -264,3 +264,45 @@ export const accordionContents: {
       "Embrace the essence of clean lines and sleek designs at Modern Minimalism. Our furniture store showcases contemporary pieces that exude sophistication and simplicity. Create a clutter-free oasis with our minimalist-inspired furniture range, featuring statement-making sofas, minimalist bed frames, and sleek storage solutions that add an air of refined elegance to your home.",
   },
 ];
+
+export const cartItems: {
+  id: number;
+  product_name: string;
+  imgSrc: string;
+  price: number;
+  quantity: number;
+  total: number;
+}[] = [
+  {
+    id: 1,
+    product_name: "Comfortable Sofa",
+    imgSrc: "/images/apple-watch.png",
+    price: 499.99,
+    quantity: 2,
+    total: 999.98,
+  },
+  {
+    id: 2,
+    product_name: "Elegant Dining Table",
+    imgSrc: "/images/apple-watch.png",
+    price: 349.5,
+    quantity: 1,
+    total: 349.5,
+  },
+  {
+    id: 3,
+    product_name: "Stylish Bookshelf",
+    imgSrc: "/images/apple-watch.png",
+    price: 189.75,
+    quantity: 3,
+    total: 569.25,
+  },
+  {
+    id: 4,
+    product_name: "Cozy Bed",
+    imgSrc: "/images/apple-watch.png",
+    price: 799.0,
+    quantity: 2,
+    total: 1598.0,
+  },
+];
