@@ -11,8 +11,8 @@ export const navigationLinks = [
   },
   {
     id: 3,
-    label: "Shop",
-    href: "/shop",
+    label: "About",
+    href: "/about",
   },
   {
     id: 4,
