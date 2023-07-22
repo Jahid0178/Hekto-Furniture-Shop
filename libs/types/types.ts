@@ -39,3 +39,14 @@ export type ProductCardProps = {
 export type NewsLaterProps = {
   title: string;
 };
+
+export type cartTableItemProps = {
+  data: {
+    id: number;
+    product_name: string;
+    imgSrc: string;
+    price: number;
+    quantity: number;
+    total: number;
+  };
+};
