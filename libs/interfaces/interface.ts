@@ -3,6 +3,12 @@ export interface LogInFormInput {
   password: string;
 }
 
+export interface SignUpFormInput {
+  fullName: string;
+  email: string;
+  password: string;
+}
+
 export interface ContactFormProps {
   name: string;
   email: string;
