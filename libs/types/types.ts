@@ -55,3 +55,17 @@ export type AdminLoginInputs = {
   email: string;
   password: string;
 };
+
+/**
+ * Admin Dashboard Types
+ */
+
+export type AddProductInputProps = {
+  images: any;
+  productName: string;
+  price: number;
+  description: string;
+  category: string;
+  quantity: number;
+  brand: string;
+};
