@@ -1,3 +1,4 @@
+import AdminSidebar from "@/components/admin/AdminSidebar/AdminSidebar";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,8 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main>{children}</main>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <main className="grid  grid-cols-[300px_minmax(900px,_1fr)]">
+          <AdminSidebar />
+          {children}
+        </main>
       </body>
     </html>
   );
