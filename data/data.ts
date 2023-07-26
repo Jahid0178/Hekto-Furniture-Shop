@@ -299,3 +299,21 @@ export const cartItems = [
     total: 1598.0,
   },
 ];
+
+export const adminSidebarLinks = [
+  {
+    id: 1,
+    label: "Dashboard",
+    href: "/admin/dashboard",
+  },
+  {
+    id: 2,
+    label: "Add Product",
+    href: "/admin/add-product",
+  },
+  {
+    id: 3,
+    label: "Update Product",
+    href: "/admin/update-product",
+  },
+];
