@@ -22,6 +22,18 @@
   section {
     @apply py-8;
   }
+
+  input {
+    @apply border border-gray-300 rounded outline-none p-2;
+  }
+
+  textarea {
+    @apply border border-gray-300 rounded outline-none p-2;
+  }
+
+  select {
+    @apply outline-none;
+  }
 }
 
 @layer components {
