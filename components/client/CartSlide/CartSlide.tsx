@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { GrFormClose } from "react-icons/gr";
 
 const CartSlide = ({ toggle, setToggle }: { toggle: any; setToggle: any }) => {
   return (
@@ -9,7 +10,14 @@ const CartSlide = ({ toggle, setToggle }: { toggle: any; setToggle: any }) => {
         toggle ? "translate-x-0" : "translate-x-96"
       } z-50`}
     >
-      <button onClick={() => setToggle(!toggle)}>X</button>
+      <div className="p-2 text-right">
+        <GrFormClose
+          onClick={() => setToggle(!toggle)}
+          size={25}
+          className="ml-auto"
+          cursor="pointer"
+        />
+      </div>
       <div className="mt-4">
         <h2 className="text-2xl font-bold">Product Cart Is Empty</h2>
       </div>
