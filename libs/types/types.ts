@@ -50,3 +50,8 @@ export type cartTableItemProps = {
     total: number;
   };
 };
+
+export type AdminLoginInputs = {
+  email: string;
+  password: string;
+};
