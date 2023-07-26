@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -8,8 +8,13 @@ import { SignUpFormInput } from "@/libs/interfaces/interface";
 import Link from "next/link";
 
 const SignUpPage = () => {
+  const [formData, setFormData] = useState({});
   const { register, handleSubmit } = useForm<SignUpFormInput>();
-  const onSubmit: SubmitHandler<SignUpFormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<SignUpFormInput> = (data) => {
+    setFormData(data);
+  };
+  console.log(formData);
+
   return (
     <>
       <PageHeading title="Sign Up" />
@@ -22,7 +27,7 @@ const SignUpPage = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
-                type="email"
+                type="text"
                 className="w-full border border-[#C2C5E1] rounded p-2 outline-none mb-4"
                 {...register("fullName", { required: true, maxLength: 20 })}
                 placeholder="Full Name"
@@ -30,7 +35,7 @@ const SignUpPage = () => {
               <input
                 type="email"
                 className="w-full border border-[#C2C5E1] rounded p-2 outline-none mb-4"
-                {...register("email", { required: true, maxLength: 20 })}
+                {...register("email", { required: true })}
                 placeholder="Email Address"
               />
               <input
