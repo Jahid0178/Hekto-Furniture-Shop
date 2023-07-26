@@ -4,6 +4,7 @@ export interface LogInFormInput {
 }
 
 export interface SignUpFormInput {
+  readonly role: "user";
   fullName: string;
   email: string;
   password: string;
