@@ -5,6 +5,7 @@ import axios from "axios";
 import Container from "@/components/common/Container";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AddProductInputProps } from "@/libs/types/types";
+import Heading from "@/components/client/Heading/Heading";
 
 type TagsProps = string[];
 
@@ -52,7 +53,7 @@ const AddProductPage = () => {
     <section>
       <Container>
         <div>
-          <h1 className="text-2xl">Add Product</h1>
+          <Heading title="Add Products" />
           <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
             <div className="mb-2">
               <label className="mb-1 inline-block" htmlFor="images">

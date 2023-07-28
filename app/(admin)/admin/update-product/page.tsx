@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "@/components/common/Container";
+import Heading from "@/components/client/Heading/Heading";
 
 const getProducts = async () => {
   try {
@@ -23,13 +24,15 @@ const UpdateProductPage = async () => {
   return (
     <section>
       <Container>
-        <h2>Update Product</h2>
-        {data?.map((product: any) => (
-          <div key={product._id}>
-            <h2>{product.productName}</h2>
-            <p>{product.category}</p>
-          </div>
-        ))}
+        <Heading title="Update Products" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {data?.map((product: any) => (
+            <div key={product._id} className="p-2 border rounded">
+              <h2>{product.productName}</h2>
+              <p>{product.category}</p>
+            </div>
+          ))}
+        </div>
       </Container>
     </section>
   );
