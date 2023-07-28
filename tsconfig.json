@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "jest.config.mjs"
+    "jest.config.mjs",
+    "libs/config/imageUpload.js"
   ],
   "exclude": ["node_modules"]
 }

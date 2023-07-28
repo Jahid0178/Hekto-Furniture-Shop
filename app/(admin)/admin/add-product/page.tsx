@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import axios from "axios";
 import Container from "@/components/common/Container";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AddProductInputProps } from "@/libs/types/types";
@@ -14,9 +15,31 @@ const AddProductPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<AddProductInputProps>();
-  const onSubmit: SubmitHandler<AddProductInputProps> = (data) => {
+  const onSubmit: SubmitHandler<AddProductInputProps> = async (data) => {
     const modifyData = { ...data, tags };
-    console.log(modifyData);
+    const { images, ...rest } = modifyData;
+    const formData = new FormData();
+
+    // console.log(images);
+
+    for (let fd in rest) {
+      formData.append(fd, (rest as any)[fd]);
+    }
+
+    for (let img in images) {
+      formData.append("files", (images as any)[img]);
+    }
+
+    const response = await axios.post(
+      "http://localhost:3000/admin/api/add-product",
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(response.data.body);
   };
 
   const handleTags = (e: any) => {
