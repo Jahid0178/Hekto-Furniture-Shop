@@ -6,6 +6,8 @@ import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { SignUpFormInput } from "@/libs/interfaces/interface";
 import Link from "next/link";
+import Button from "@/components/common/Button/Button";
+import { FaGoogle } from "react-icons/fa";
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({});
@@ -56,6 +58,15 @@ const SignUpPage = () => {
                 value="Create an account"
               />
             </form>
+            <div className="mt-5">
+              <Button
+                type="button"
+                className="border border-gray-500 px-4 py-2 rounded-full w-full flex items-center justify-center gap-2"
+              >
+                <FaGoogle />
+                Continue With Google
+              </Button>
+            </div>
           </div>
         </Container>
       </section>
