@@ -2,8 +2,18 @@ import { NextResponse } from "next/server";
 import connectMongoDB from "../../../../../libs/config/mongodb.config";
 import AddProduct from "../../../../../models/addProductModel";
 
+connectMongoDB();
+
 export async function POST(request) {
   try {
+    const body = await request.json();
+    console.log(body.files);
+    return NextResponse.json({
+      message: "Add Product Created",
+      status: 201,
+      body,
+    });
+    return;
     if (request.method !== "POST") {
       return NextResponse.error("Method not allowed", 405);
     }
@@ -38,9 +48,6 @@ export async function POST(request) {
       return NextResponse.error("Required fields missing.", 400);
     }
 
-    // Connect to MongoDB
-    await connectMongoDB();
-
     // Create a new product entry
     await AddProduct.create({
       images,
@@ -67,7 +74,7 @@ export async function POST(request) {
 
 export async function GET() {
   try {
-    await connectMongoDB();
+    // await connectMongoDB();
     const products = await AddProduct.find();
     if (!products.length) {
       return NextResponse.error("Product Not Found!");
