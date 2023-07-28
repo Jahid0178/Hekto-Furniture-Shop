@@ -22,13 +22,11 @@ const getProducts = async () => {
 const UpdateProductPage = async () => {
   const res = await getProducts();
   let { products } = res;
-  products === undefined ? (products = []) : products;
-  console.log(products);
   return (
     <section>
       <Container>
         <h2>Update Product</h2>
-        {products.map((product: any) => (
+        {products?.map((product: any) => (
           <div key={product._id}>
             <h2>{product.productName}</h2>
             <p>{product.category}</p>
