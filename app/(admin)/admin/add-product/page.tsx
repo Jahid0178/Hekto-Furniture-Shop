@@ -39,7 +39,8 @@ const AddProductPage = () => {
         },
       }
     );
-    console.log(response.data.body);
+    console.log(response.data);
+    console.log(formData.get("files"));
   };
 
   const handleTags = (e: any) => {
