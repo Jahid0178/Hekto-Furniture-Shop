@@ -21,7 +21,9 @@ const getProducts = async () => {
 
 const UpdateProductPage = async () => {
   const res = await getProducts();
-  const { products } = res;
+  let { products } = res;
+  products === undefined ? (products = []) : products;
+  console.log(products);
   return (
     <section>
       <Container>
