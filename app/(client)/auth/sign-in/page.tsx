@@ -5,7 +5,7 @@ import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
 import { LogInFormInput } from "@/libs/interfaces/interface";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import Button from "@/components/common/Button/Button";
 
@@ -58,7 +58,7 @@ const SignInPage = () => {
               type="button"
               className="border border-gray-500 px-4 py-2 rounded-full w-full flex items-center justify-center gap-2"
             >
-              <FaGoogle />
+              <FcGoogle />
               Continue With Google
             </Button>
           </div>
