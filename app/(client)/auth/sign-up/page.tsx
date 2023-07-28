@@ -7,7 +7,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { SignUpFormInput } from "@/libs/interfaces/interface";
 import Link from "next/link";
 import Button from "@/components/common/Button/Button";
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({});
@@ -63,7 +63,7 @@ const SignUpPage = () => {
                 type="button"
                 className="border border-gray-500 px-4 py-2 rounded-full w-full flex items-center justify-center gap-2"
               >
-                <FaGoogle />
+                <FcGoogle />
                 Continue With Google
               </Button>
             </div>
