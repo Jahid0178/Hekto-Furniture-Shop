@@ -1,5 +1,7 @@
-import Container from "@/components/common/Container";
+"use client";
+
 import React from "react";
+import Container from "@/components/common/Container";
 
 const getProducts = async () => {
   try {
@@ -18,8 +20,8 @@ const getProducts = async () => {
 };
 
 const UpdateProductPage = async () => {
-  const { products } = await getProducts();
-  console.log(products);
+  const res = await getProducts();
+  const { products } = res;
   return (
     <section>
       <Container>
