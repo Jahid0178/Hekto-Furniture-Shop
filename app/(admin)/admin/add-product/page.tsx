@@ -21,27 +21,24 @@ const AddProductPage = () => {
     const { images, ...rest } = modifyData;
     const formData = new FormData();
 
-    // console.log(images);
+    formData.append("image", images[0]);
 
-    for (let fd in rest) {
-      formData.append(fd, (rest as any)[fd]);
-    }
-
-    for (let img in images) {
-      formData.append("files", (images as any)[img]);
-    }
-
-    const response = await axios.post(
-      "http://localhost:3000/admin/api/add-product",
-      formData,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
+    const imgRes = axios.post(
+      `https://api.imgbb.com/1/upload?key=${process.env.imgbbApiKey}`,
+      formData
     );
-    console.log(response.data);
-    console.log(formData.get("files"));
+
+    imgRes.then((res) => {
+      if (res.data.success) {
+        const { data } = res.data;
+
+        const response = axios.post(
+          "http://localhost:3000/admin/api/add-product",
+          { ...data, ...rest }
+        );
+        console.log(response);
+      }
+    });
   };
 
   const handleTags = (e: any) => {

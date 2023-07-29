@@ -7,7 +7,8 @@ connectMongoDB();
 export async function POST(request: Request) {
   try {
     const {
-      files,
+      image: { url },
+      delete_url,
       productName,
       price,
       category,
@@ -17,9 +18,12 @@ export async function POST(request: Request) {
       tags,
     } = await request.json();
 
+    console.log(url, delete_url);
+
     // Create a new product entry
     await AddProduct.create({
-      files,
+      url,
+      delete_url,
       productName,
       price,
       category,
@@ -33,7 +37,6 @@ export async function POST(request: Request) {
     return NextResponse.json({
       message: "Add Product Created",
       status: 201,
-      files,
     });
   } catch (error) {
     console.error("Error while processing the request:", error);
