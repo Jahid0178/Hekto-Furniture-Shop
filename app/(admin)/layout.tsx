@@ -2,6 +2,7 @@ import AdminSidebar from "@/components/admin/AdminSidebar/AdminSidebar";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
+        <Toaster />
         <main className="grid  grid-cols-[300px_minmax(900px,_1fr)]">
           <AdminSidebar />
           {children}
