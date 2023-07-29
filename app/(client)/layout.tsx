@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import "../globals.css";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store/store";
 
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -18,12 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={josefin_sans.className} suppressHydrationWarning={true}>
-        <Toaster />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <Provider store={store}>
+        <body
+          className={josefin_sans.className}
+          suppressHydrationWarning={true}
+        >
+          <Toaster />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </body>
+      </Provider>
     </html>
   );
 }

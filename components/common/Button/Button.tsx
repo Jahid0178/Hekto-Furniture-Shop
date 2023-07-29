@@ -7,9 +7,10 @@ const Button = ({
   className,
   type,
   icon,
+  onClick,
 }: ButtonProps): JSX.Element => {
   return (
-    <button className={className} type={type}>
+    <button className={className} type={type} onClick={onClick}>
       {children} {icon}
     </button>
   );

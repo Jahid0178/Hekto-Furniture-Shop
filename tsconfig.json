@@ -29,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "jest.config.mjs",
-    "libs/config/imageUpload.js"
+    "libs/config/imageUpload.js",
+    "redux/store/store.ts"
   ],
   "exclude": ["node_modules"]
 }

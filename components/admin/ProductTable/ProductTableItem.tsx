@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
+import Button from "@/components/common/Button/Button";
+import Image from "next/image";
 
 const ProductTableItem = () => {
   return (
@@ -13,7 +16,24 @@ const ProductTableItem = () => {
       </td>
       <td className="p-2 border text-primary">$ price</td>
       <td className="p-2 border text-primary"> quantity Pcs</td>
-      <td className="p-2 border text-primary">Actions</td>
+      <td className="p-2 border text-primary">
+        <div className="flex gap-4">
+          <Button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => alert("Edit")}
+          >
+            Edit
+          </Button>
+          <Button
+            type="button"
+            className="btn bg-red-600 text-white"
+            onClick={() => alert("Delete")}
+          >
+            Delete
+          </Button>
+        </div>
+      </td>
     </tr>
   );
 };
