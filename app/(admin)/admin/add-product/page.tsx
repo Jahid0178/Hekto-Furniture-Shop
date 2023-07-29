@@ -6,6 +6,7 @@ import Container from "@/components/common/Container";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AddProductInputProps } from "@/libs/types/types";
 import Heading from "@/components/client/Heading/Heading";
+import { toast } from "react-hot-toast";
 
 type TagsProps = string[];
 
@@ -36,7 +37,12 @@ const AddProductPage = () => {
           "http://localhost:3000/admin/api/add-product",
           { ...data, ...rest }
         );
-        console.log(response);
+        response.then((res) => {
+          const { data, status } = res;
+          if (status === 200) {
+            toast.success(data?.message);
+          }
+        });
       }
     });
   };
