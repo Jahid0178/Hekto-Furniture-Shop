@@ -1,7 +1,6 @@
 import CartTable from "@/components/client/Tables/CartTable/CartTable";
 import Container from "@/components/common/Container";
 import PageHeading from "@/components/common/PageHeading/PageHeading";
-import Image from "next/image";
 import React from "react";
 
 const ShoppingCartPage = () => {

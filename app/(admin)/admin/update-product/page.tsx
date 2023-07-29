@@ -1,38 +1,33 @@
-import React from "react";
+"use client";
+
+import React, { Suspense, useEffect, useState } from "react";
 import Container from "@/components/common/Container";
 import Heading from "@/components/client/Heading/Heading";
+import axios from "axios";
+import WideCard from "@/components/client/Cards/WideCard/WideCard";
+import ProductTable from "@/components/admin/ProductTable/ProductTable";
 
-const getProducts = async () => {
-  try {
-    const res = await fetch("http://localhost:3000/admin/api/add-product", {
-      cache: "no-store",
+const UpdateProductPage = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/admin/api/add-product").then((res) => {
+      if (res.status === 200) {
+        console.log(res);
+        setData(res.data?.products);
+      } else {
+        setData([]);
+      }
     });
+  }, []);
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch products");
-    }
+  console.log(data);
 
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const UpdateProductPage = async () => {
-  const res = await getProducts();
-  const data = res?.products;
   return (
     <section>
       <Container>
         <Heading title="Update Products" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {data?.map((product: any) => (
-            <div key={product._id} className="p-2 border rounded">
-              <h2>{product.productName}</h2>
-              <p>{product.category}</p>
-            </div>
-          ))}
-        </div>
+        <ProductTable />
       </Container>
     </section>
   );

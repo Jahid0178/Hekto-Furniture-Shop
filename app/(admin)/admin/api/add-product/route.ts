@@ -49,7 +49,9 @@ export async function GET() {
     // await connectMongoDB();
     const products = await AddProduct.find();
     if (!products.length) {
-      return NextResponse.error();
+      return NextResponse.json({
+        message: "Not Product Found",
+      });
     }
     return NextResponse.json({ products });
   } catch (error) {

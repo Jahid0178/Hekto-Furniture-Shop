@@ -1,22 +1,26 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { BsCart3, BsHeart, BsZoomIn } from "react-icons/bs";
 
 type WideCardProps = {
   data: {
-    id: number;
-    imgSrc: string;
-    title: string;
+    id: string;
+    url: string;
+    productName: string;
     price: number;
-    regularPrice: number;
+    description: string;
+    quantity: string;
+    createdAt: string;
+    brand: string;
   };
 };
 
 const WideCard = ({ data }: WideCardProps) => {
-  const { id, imgSrc, title, price, regularPrice } = data;
-
+  const { url, price, productName } = data;
   return (
-    <div className="p-2 relative group">
+    <div className="p-2 relative group shadow">
       <ul className="hidden absolute bottom-11 left-2 group-hover:inline-block">
         <li className="my-5 text-[#151875]">
           <BsCart3 cursor="pointer" size={20} />
@@ -30,18 +34,18 @@ const WideCard = ({ data }: WideCardProps) => {
       </ul>
       <div className="bg-gray-100 hover:bg-white">
         <Image
-          src={imgSrc}
-          alt={title}
+          src={url}
+          alt={productName}
           width={350}
           height={280}
           className="mx-auto"
         />
       </div>
       <div className="flex gap-2 justify-between items-center p-1">
-        <h3 className="text-[#151875]">{title}</h3>
+        <h3 className="text-[#151875]">{productName}</h3>
         <span className="flex gap-2">
           <p className="text-[#151875]">${price}</p>
-          <p className="text-secondary line-through">${regularPrice}</p>
+          <p className="text-secondary line-through">${price}</p>
         </span>
       </div>
     </div>
